@@ -1,0 +1,3 @@
+# ZADAC
+
+Hackathon repository
