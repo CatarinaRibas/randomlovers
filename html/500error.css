@@ -1,0 +1,17 @@
+#errorBox{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 100px;
+    
+}
+
+#errorNumber{
+    text-align: center;
+}
+#background{
+    background-image: url('https://media.giphy.com/media/OqAf4TvOhqTqMwRDA5/giphy.gif');
+    background-size: 2000px;
+}
+
