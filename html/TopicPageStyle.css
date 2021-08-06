@@ -1,6 +1,6 @@
 body {
     font-family: 'monospace', sans-serif;
-    background: #fafafa;
+    background-color:white;
 }
 
 a, a:hover, a:focus {
@@ -64,8 +64,8 @@ li {
     display: flex;
     align-content: center;
     justify-content: center;
+    height: 150px;
     background-color: rgb(30, 148, 216);
-    height: 60px;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.5rem;
 }
@@ -79,11 +79,16 @@ li {
     }
 }
 
+#sidebarCollapse {
+    float:left;
+}
+
 /* MAIN CONTENT */
 
 #maincontent{
     margin-top: 50px;
-    margin-right: 50px;
+    margin-left: 50px;
+    margin-right: 100px;
     display: inline-block;
     justify-content: space-around;
     height: 500px;
@@ -91,6 +96,50 @@ li {
 }
 
 #picture{
-    max-width: 400px;
-    max-height: 400px;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    text-align: center;
+    margin-left: 50px;
 }
+
+#picturecaption {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#comment {
+    display: inline;
+    justify-content: center;
+    position: relative;
+}
+
+.contentchild {
+    margin: 50px;
+}
+
+#commentdiv {
+    display: flex;
+    align-content: flex-start;
+}
+
+#commentp {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#userPicture {
+    margin-top: 40px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+#usernameP {
+    margin-top: 53px;
+    margin-right: 5px;
+}
+
+

@@ -32,8 +32,10 @@ var populateDiv = function(response) {
         
         var element = $('#childHotTopic' + i);
 
-        result = "<a href='TopicPage.html' target='_blank'><img id='picture' src=" + response[i].imagePath + " alt='hot topic'/></a>" + 
+        result = "<a href='TopicPage.html?id=" + response[i].id + "'target='_blank'><img id='picture' src=" + response[i].imagePath + " alt='hot topic'/></a>" + 
         "<a href='TopicPage.html' target='_blank'><h4 id='imageLegend'>" + response[i].name + "</h4></a>";
+
+        
         
         $(element).append(result);
         console.log(result);
