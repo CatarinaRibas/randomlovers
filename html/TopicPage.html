@@ -29,10 +29,10 @@
                 </div>
             <ul class ="list-components">
                 <li class="active"> 
-                    <a href="home" class="home"> #Home</a>
-                    <a href="hottopics" class="hottopics"> #Hot Topics</a>
-                    <a href="alltopics" class="alltopics"> #All Topics</a>
-                    <a href="randomtopic" class="randomtopic"> #Random Topic</a>
+                    <a href="index.html" class="home"> #Home</a>
+                    <a href="http://127.0.0.1:5500/#hotTopicDiv"> #Hot Topics</a>
+                    <a href="AllTopics.html" class="alltopics"> #All Topics</a>
+                    <a href="random.html" class="randomtopic"> #Random Topic</a>
                 </li>
             </ul>
         </nav>
@@ -45,11 +45,16 @@
                 <div class="contentchild">
                 <p id="question1"></p>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label3" for="defaultCheck1"></label>
-                          <p></p>
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                        <label class="form-check-label4" for="defaultCheck2"></label>
+
+                        <form name="form1" action="javascript:persist()" onsubmit="return validateForm()" method="post">
+                           <input class="form-check-input" type="radio" value="like" id="defaultCheck3" name="group1">
+                            <label class="form-check-label3" for="defaultCheck3"></label>
+                            <p></p>
+                            <input class="form-check-input" type="radio" value="dislike" id="defaultCheck4" name="group1">
+                            <label class="form-check-label4" for="defaultCheck4"></label>
+                            <p></p>
+                            <input type="submit"  value="Submit" class="btn btn-info"> 
+                        </form>
                       </div>
                       <p></p>
                       <div id="comment">
@@ -57,15 +62,13 @@
                         <p></p>
                         <input type="submit" value="Submit Comment" class="btn btn-info">
                     </div>
+
                     
                 </div>
                     <div id="childHotTopic3"></div>
             </div>
             <p id="commentp">User comments:</p>
             <div id="commentdiv">
-                <img id="userPicture" src="boneco.png" alt="User Picture"/>
-                <p id="usernameP">Username:</p>
-                <textarea rows="6" cols="170" id="previousComment" name="previousComment" form="usrform"></textarea> 
             </div>
         </div> 
     </div>

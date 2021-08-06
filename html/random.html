@@ -18,6 +18,7 @@
 <body>
     <main>
         <header id="header1">
+            <h1></h1>
         </header>
         
         <div class="wrapper">
@@ -27,10 +28,10 @@
                 </div>
             <ul class ="list-components">
                 <li class="active"> 
-                    <a href="home" class="home"> #Home</a>
-                    <a href="hottopics" class="hottopics"> #Hot Topics</a>
-                    <a href="alltopics" class="alltopics"> #All Topics</a>
-                    <a href="randomtopic" class="randomtopic"> #Random Topic</a>
+                    <a href="index.html" class="home"> #Home</a>
+                    <a href="http://127.0.0.1:5500/#hotTopicDiv" class="hottopics"> #Hot Topics</a>
+                    <a href="AllTopics.html" class="alltopics"> #All Topics</a>
+                    <a href="random.html" class="randomtopic"> #Random Topic</a>
                 </li>
             </ul>
         </nav>
@@ -43,17 +44,25 @@
                 <div class="contentchild">
                 <p id="question"></p>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+
+                        <form name="form2" action="javascript:randomPersist()" onsubmit="return validateForm1()" method="post">
+                        <input  class="form-check-input" type="radio" value="like" id="defaultCheck1" name="group2">
                         <label class="form-check-label1" for="defaultCheck1"></label>
-                          <p></p>
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <p></p>
+                        <input  class="form-check-input" type="radio" value="dislike" id="defaultCheck2" name="group2">
                         <label class="form-check-label2" for="defaultCheck2"></label>
-                      </div>
+                        <p></p>
+                        <input type="submit"  value="Submit" class="btn btn-info">
+                        </form>
+                        
+                    </div>
                       <p></p>
                       <div id="comment">
-                        <textarea rows="6" cols="80" name="comment" form="usrform" placeholder="Enter comment here..."></textarea>
+                        <form name="form3" action="javascript:randomCommentPersist()" onsubmit="return validateRandomComment()"  method="post">
+                        <textarea type="text" rows="6" cols="80" name="comment" form="usrform" placeholder="Enter comment here..." minlength="5" name="randomComment"> </textarea>
                         <p></p>
                         <input type="submit" value="Submit Comment" class="btn btn-info">
+                        </form>
                     </div>
                     
                 </div>
@@ -61,11 +70,7 @@
                     </div>
             </div>
             <p id="commentp">User comments:</p>
-            <div id="commentdiv">
-                <img id="userPicture" src="boneco.png" alt="User Picture"/>
-                <p id="usernameP">Username:</p>
-                <textarea rows="6" cols="170" id="previousComment" name="previousComment" form="usrform"></textarea> 
-            </div>
+            <div id="commentdiv"></div>
         </div> 
     </div>
     </main>
