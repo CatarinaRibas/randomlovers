@@ -9,6 +9,7 @@ import randomlovers.persistence.model.Comment;
 import randomlovers.services.CommentService;
 import randomlovers.services.TopicService;
 
+import java.util.List;
 import java.util.Map;
 
 @CrossOrigin(origins ="*", maxAge = 3600)
@@ -20,7 +21,7 @@ public class CommentController {
     private TopicService topicService;
 
     @RequestMapping(method = RequestMethod.GET, path="/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Map<Integer,Comment>> listAllComents(@PathVariable Integer id){
+    public ResponseEntity<List<Comment>> listAllComents(@PathVariable Integer id){
         return new ResponseEntity<>(topicService.getAllComments(id), HttpStatus.OK);
     }
 

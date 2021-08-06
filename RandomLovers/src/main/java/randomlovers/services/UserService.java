@@ -38,7 +38,6 @@ public class UserService {
     @Transactional
     public void addComment(Integer id, Comment comment) {
         User user = userDao.findById(id);
-        user.getComments().put(comment.getId(), comment);
         userDao.saveOrUpdate(user);
     }
 

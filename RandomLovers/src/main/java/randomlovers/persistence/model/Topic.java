@@ -1,6 +1,7 @@
 package randomlovers.persistence.model;
 
 import javax.persistence.*;
+import java.util.Comparator;
 import java.util.Map;
 
 @Entity
@@ -27,8 +28,7 @@ public class Topic implements Model {
             mappedBy = "topic",
             fetch = FetchType.EAGER
     )
-    @Transient
-    private Map<Integer, Comment> comments;
+
 
     @Override
     public Integer getId() {
@@ -97,11 +97,7 @@ public class Topic implements Model {
         this.description = description;
     }
 
-    public Map<Integer, Comment> getComments() {
-        return comments;
-    }
-    public void setComments(Map<Integer, Comment> comments) {
-        this.comments = comments;
-    }
+
+
 
 }

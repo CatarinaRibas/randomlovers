@@ -16,7 +16,7 @@ public class CommentService {
 
         Comment comment = commentDao.findById(id);
 
-        comment.setNumberOfLikes(commentDao.findById(id).getNumberOfLikes()+1);
+        comment.setNumberLikes(commentDao.findById(id).getNumberLikes()+1);
         comment.setTotalPoints(commentDao.findById(id).getTotalPoints()+1);
 
         commentDao.saveOrUpdate(comment);
@@ -27,7 +27,7 @@ public class CommentService {
 
         Comment comment = commentDao.findById(id);
 
-        comment.setNumberOfDislikes(commentDao.findById(id).getNumberOfDislikes()+1);
+        comment.setNumberDislikes(commentDao.findById(id).getNumberDislikes()+1);
         comment.setTotalPoints(commentDao.findById(id).getTotalPoints()+1);
 
         commentDao.saveOrUpdate(comment);

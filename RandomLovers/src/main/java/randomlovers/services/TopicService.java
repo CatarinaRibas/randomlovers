@@ -3,10 +3,12 @@ package randomlovers.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import randomlovers.persistence.dao.CommentDao;
 import randomlovers.persistence.dao.TopicDao;
 import randomlovers.persistence.model.Comment;
 import randomlovers.persistence.model.Topic;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -14,6 +16,7 @@ import java.util.Map;
 public class TopicService {
 
     private TopicDao topicDao;
+    private CommentDao commentDao;
 
     @Transactional
     public void addTopic(Topic topic) {
@@ -53,12 +56,20 @@ public class TopicService {
     @Transactional
     public void addComment(Integer id, Comment comment) {
         Topic topic = topicDao.findById(id);
-        topic.getComments().put(comment.getId(), comment);
         topicDao.saveOrUpdate(topic);
     }
 
-    public Map<Integer,Comment> getAllComments(Integer id) {
-        return topicDao.findById(id).getComments();
+    public List<Comment> getAllComments(Integer id) {
+
+        List<Comment> commentList = commentDao.findAll();
+        List<Comment> result = new LinkedList<>();
+        for (Comment comment: commentList) {
+            if(comment.getTopic().getId() == id){
+                result.add(comment);
+            }
+
+        }
+        return result;
     }
 
     //getters &6 setters
@@ -67,4 +78,8 @@ public class TopicService {
         this.topicDao = topicDao;
     }
 
+    @Autowired
+    public void setCommentDao(CommentDao commentDao) {
+        this.commentDao = commentDao;
+    }
 }

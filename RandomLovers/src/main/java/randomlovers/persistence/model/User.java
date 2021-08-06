@@ -14,13 +14,6 @@ public class User implements Model {
     private String username;
     private String password;
 
-    @OneToMany(
-            cascade = CascadeType.ALL,
-            orphanRemoval = true,
-            mappedBy = "user",
-            fetch = FetchType.EAGER
-    )
-    private Map<Integer,Comment> comments;
 
     @Override
     public Integer getId() {
@@ -45,10 +38,5 @@ public class User implements Model {
         this.password = password;
     }
 
-    public Map<Integer, Comment> getComments() {
-        return comments;
-    }
-    public void setComments(Map<Integer, Comment> comments) {
-        this.comments = comments;
-    }
+
 }

@@ -10,8 +10,8 @@ public class Comment implements Model {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer numberOfLikes;
-    private Integer numberOfDislikes;
+    private Integer numberLikes;
+    private Integer numberDislikes;
     private Integer totalPoints;
 
     @ManyToOne
@@ -31,18 +31,18 @@ public class Comment implements Model {
         this.id = id;
     }
 
-    public Integer getNumberOfLikes() {
-        return numberOfLikes;
+    public Integer getNumberLikes() {
+        return numberLikes;
     }
-    public void setNumberOfLikes(Integer numberOfLikes) {
-        this.numberOfLikes = numberOfLikes;
+    public void setNumberLikes(Integer numberOfLikes) {
+        this.numberLikes = numberOfLikes;
     }
 
-    public Integer getNumberOfDislikes() {
-        return numberOfDislikes;
+    public Integer getNumberDislikes() {
+        return numberDislikes;
     }
-    public void setNumberOfDislikes(Integer numberOfDislikes) {
-        this.numberOfDislikes = numberOfDislikes;
+    public void setNumberDislikes(Integer numberOfDislikes) {
+        this.numberDislikes = numberOfDislikes;
     }
 
     public Integer getTotalPoints() {
