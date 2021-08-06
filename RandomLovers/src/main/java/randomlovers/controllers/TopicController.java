@@ -55,7 +55,6 @@ public class TopicController {
 
     @RequestMapping(method = RequestMethod.GET, path = "/random", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Topic> showRandomTopic() {
-
         Integer id = (int) (Math.round((Math.random()*15)));
         Topic topic = topicService.getTopicById(id);
 
