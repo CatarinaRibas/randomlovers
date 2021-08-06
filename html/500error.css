@@ -1,15 +1,21 @@
 #errorBox{
     display: flex;
-    align-content: center;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    font-size: 100px;
     
 }
 
 #errorNumber{
-    text-align: center;
+    font-size: 100px;
 }
+
+#sentence{
+    font-size: 50px;
+}
+
+
+
 #background{
     background-image: url('https://media.giphy.com/media/OqAf4TvOhqTqMwRDA5/giphy.gif');
     background-size: 2000px;
