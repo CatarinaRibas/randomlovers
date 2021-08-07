@@ -1,0 +1,154 @@
+body {
+    font-family: 'monospace', sans-serif;
+    background-color:white;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background:rgb(30, 148, 216);
+    color: white;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: rgb(30, 148, 216);;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+li {
+    list-style-type: none;
+}
+
+#header1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 150px;
+    background-color: rgb(30, 148, 216);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+#sidebarCollapse {
+    float:left;
+}
+
+/* MAIN CONTENT */
+
+#maincontent{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 100px;
+    display: inline-block;
+    justify-content: space-around;
+    height: 500px;
+    width: inherit;
+}
+
+#picture{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    text-align: center;
+    margin-left: 50px;
+}
+
+#picturecaption {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#comment {
+    display: inline;
+    justify-content: center;
+    position: relative;
+}
+
+.contentchild {
+    margin: 50px;
+}
+
+#commentdiv {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+}
+
+#commentp {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#userPicture {
+    margin-top: 40px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+#usernameP {
+    margin-top: 53px;
+    margin-right: 5px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#previousComment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+

@@ -1,0 +1,43 @@
+#header1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 150px;
+    background-color: rgb(30, 148, 216);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    margin: -10px;
+    z-index: 1;
+}
+
+#parentHotTopic1 {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#picture {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+#picture:hover {
+    opacity: 0.5;
+}
+
+#imageCaption{
+    display: flex;
+    justify-content: center;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.sticky #parentHotTopic1{
+    padding-top: 102px;
+}
