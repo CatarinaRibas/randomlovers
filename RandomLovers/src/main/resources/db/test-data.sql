@@ -15,7 +15,7 @@ INSERT INTO topic(ID, NAME, OPTIONANAME, OPTIONA, OPTIONBNAME, OPTIONB, TOTALVOT
 (4, 'Family Tree', 'Siblings', 50, 'Not Siblings', 30, 80, 'resources/images/siblings.jpg', 'Are these two random people related?'),
 (5, 'Carneiro', 'Cordeiro', 40, 'Caseiro', 40, 80, 'resources/images/carneiro.jpg', 'Whats this persons real name?'),
 (6, 'Who came first', 'Chicken', 33, 'Egg', 33, 60, 'resources/images/chicken-egg.jpg', 'Whose '),
-(7, 'Black and White', 'White with black stripes', 33, 'Black with white stripes', 33, 60, 'resources/images/zebra.jpg', 'Description'),
+(7, 'Black and White', 'White with black stripes', 33, 'Black with white stripes', 33, 60, 'resources/images/zebra.jpg', 'Black and white or white and black?'),
 (8, 'Clap clap for Igreja', 'Clap Clap', 33, 'Enjoy the Silence', 33, 60, 'resources/images/igreja.jpg', 'Description'),
 (9, 'Soda Wars', 'Coke', 44, 'Pepsi', 36, 80, 'resources/images/soda.jpg', 'Lets keep it simple. Coke or Pepsi?'),
 (10, 'Kitchenware', 'Cada panela com o seu testo', 34, 'Cada testo uma panela', 34, 60, 'resources/images/kitchenware.jpg', 'What´s the popular portuguese saying?'),
