@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import randomlovers.persistence.model.Comment;
 import randomlovers.persistence.model.Topic;
 import randomlovers.services.TopicService;
 
@@ -63,6 +64,18 @@ public class TopicController {
         }
 
         return new ResponseEntity<>(topic, HttpStatus.OK);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, path = "like/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Topic> addLike(@PathVariable Integer id){
+        topicService.addOptionA(id);
+        return new ResponseEntity<>(topicService.getTopicById(id),HttpStatus.OK);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, path = "dislike/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Topic> addDislike(@PathVariable Integer id){
+        topicService.addOptionB(id);
+        return new ResponseEntity<>(topicService.getTopicById(id),HttpStatus.OK);
     }
 
 }

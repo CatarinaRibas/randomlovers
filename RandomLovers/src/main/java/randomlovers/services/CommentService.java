@@ -33,6 +33,12 @@ public class CommentService {
         commentDao.saveOrUpdate(comment);
     }
 
+    @Transactional
+    public void addComment(Comment comment) {
+        commentDao.saveOrUpdate(comment);
+
+    }
+
 
     // getters && setters
     @Autowired
